@@ -1,0 +1,148 @@
+body {
+  background: linear-gradient(to bottom right, #4b2e2b 60%, #732e2e 100%) !important;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh; /* Add this to ensure the body takes up full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.sidebar{
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c3e50, #3498db);
+  color: white;
+  width: 280px !important;
+  padding: 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #4b2e2b;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.sidebar-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -30px;
+  right: -30px;
+  height: 1px;
+  background-color: #4b2e2b;
+}
+
+.header-h3{
+  font-size: 24px;
+  margin-left: 10px;
+  white-space: nowrap;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+img{
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar a{
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover{
+   background-color: #4b2e2b;
+  color: white;
+  text-decoration: none;
+}
+
+i{
+  margin-right: 15px;
+}
+
+.user-sidebar{
+  margin-top: auto;
+  border-top: 1px solid #4b2e2b;
+  position: relative;
+  padding-top: 10px;
+}
+
+.user-sidebar::before{
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  background-color: #4b2e2b;
+}
+
+.main-body-container{
+  margin-left: 280px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.landing-content {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.text-container {
+  text-align: left;
+}
+
+.landing-text{
+  font-size: 40px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.landing-coffee-img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.landing-paragraph{
+  font-size: 18px;
+  color: white;
+  max-width: 400px;
+  opacity: 0.8;
+}
+
+button.order-coffee-landing-btn:hover {
+  background-color: #b11503 !important;
+}
+
+.order-coffee-landing-btn{
+  transition: transform 0.3s ease;
+}
+
+.order-coffee-landing-btn:hover{
+  transform: scale(1.05);
+}
+
+.order-coffee-landing-btn:active{
+  border-radius: none;
+}
