@@ -3,44 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Shop</title>
+  <title>Digital Espresso</title>
 
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Custom CSS link -->
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/style-products.css">
   <!-- Bootstrap CSS link -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome link -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    td img{
+      vertical-align:middle;
+      margin-right: 100px;
+      border-radius: 4px;
+    }
 
+    .nav-links a:hover{
+      color: #ffcc00 !important;
+    }
 
+    .product-cell{
+      display: flex;
+      align-items: center;
+    }
 
+    .menu-table img{
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
 
+    .menu-table tr:nth-child(2) img{
+      width: 80px;
+    }
+
+    .product-cell a{
+      display: block;
+      text-align: left;
+      font-size: 16px !important;
+    }
+  
   </style>
-
 </head>
-  <div class="sidebar position-fixed">
-    <div class="sidebar-header">
-      <img src="static/img/logo.svg" alt="logo" class="logo">
-      <h3 class="text-white header-h3">Coffee Shop</h3>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="static/img/logo.svg" alt="Logo">
+      Digital Espresso
     </div>
-    <a href="index.html"><i class="fas fa-home"></i>Home</a>
-    <a href="products.html"><i class="fas fa-mug-hot"></i>Products</a>
-    <a href="branches.html"><i class="fas fa-store"></i>Branches</a>
-    <a href="aboutus.html"><i class="fas fa-info-circle"></i>Home</a>
-    <div class="user-sidebar">
-      <a href="#"><i class="fas fa-user-circle"></i>User</a>
+
+    <ul class="nav-links" style="color: white !important;"> 
+      <li><a href="index.html" style="color: white !important;">Home</a></li>
+      <li><a href="products.html" style="color: white !important;">Products</a></li>
+      <li><a href="branches.html" style="color: white !important;">Branches</a></li>
+      <li><a href="aboutus.html" style="color: white !important;">About Us</a></li>
+    </ul>
+
+    <div class="user-container" style="font-size: 18px;">
+      USER
+      <i class="fas fa-user"></i>
     </div>
+  </nav>
+  
+  <div class="title-container">
+    <h1>Our Products</h1>
   </div>
 
-  <div class="main-body-container">
-    <h1 style="color:white;">Products</h1>
-  </div>
+  <table class="menu-table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/Iced-Americano.png" alt="Iced Americano" width="100">
+            <a href="iced-americano.html" style="font-size: 14px; width:170px;">Iced Americano</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A refreshing blend of bold espresso shots chilled over ice, delivering a smooth yet robust coffee experience.</td>
+        <td style="font-size: 13px; font-weight: bold;width: 200px;">PHP 180 - PHP 220</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/macchiatto.png" alt="Iced Americano" class="macchiatto">
+            <a href="macchiatto.html">Caramel Macchiatto</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A rich espresso-based drink with steamed milk, vanilla syrup, and a caramel drizzle.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 200 - PHP 240</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/matcha.png" alt="Iced Americano" width="100">
+            <a href="matcha.html">Matcha</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A smooth and creamy green tea latte made with finely ground japanese matcha and milk.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 250 - PHP 290</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/flatwhite.png" alt="Iced Americano">
+            <a href="flatwhite.html">Flat White</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A velvety espresso drink with steamed milk and a think layer of microfoam.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 180 - PHP 220</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/espresso.png" alt="Iced Americano" class="espresso">
+            <a href="espresso.html">Espresso</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A bold and rich shot of pure coffee, perfectly crafted for those who love a strong and smooth caffeine kick.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 180</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/affogatto.png" alt="Iced Americano" class="affogatto">
+            <a href="affogatto.html">Affogatto</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">A delightful fusion of hot and cold -- smooth espresso poured over creamy vanilla ice cream for a perfect balance of bitterness and sweetness.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 220 - PHP 280</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-cell">
+            <img src="static/img/sandwich.png" alt="Iced Americano" class="affogatto">
+            <a href="sandwich.html">Sandwich</a>
+          </div>
+        </td>
+        <td style="font-size: 16px;">Freshly made with high-quality ingredients, our sandwich is a satisfying blend of flavors, perfect for a quick bite or a heart meal.</td>
+        <td style="font-size: 13px; font-weight: bold;">PHP 300</td>
+      </tr>
+    </tbody>
+  </table>
 
- 
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Digital Espresso. All rights reserved. | Contact us: info@coffeeshop.com | 0917-125-7559</p>
+    </div>
+  </footer>
+
+
   <!-- Bootstrap CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+  
 </html>

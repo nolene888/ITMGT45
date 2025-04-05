@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  background: linear-gradient(to right, rgb(164, 79, 48) 0%, rgba(136, 54, 39, 0.76) 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.navbar{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo-container{
+  font-family: 'Oleo Script', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-container img{
+  width: 100px;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nav-links li{
+  display: inline;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a{
+  font-family: 'Rubik Mono One', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: #ffcc00;
+}
+
+.user-container{
+  font-family: 'Rubik Mono One', sans-serif;
+  display: flex;
+  align-items: center;
+  color: white;
+  font: 18px !important;
+  margin-right: 10px;
+}
+
+.user-container i{
+  font-size:18px;
+  margin-left: 8px;
+}
+
+.footer{
+  text-align: center;
+  margin-top: auto;
+  padding: 5px 0;
+  width: 100%;
+  background-color: #633535b2;
+  color: white;
+  font-family: 'Inter', sans-serif;
+
+}
+
+table{
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+th, td{
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+th{
+  text-align: center !important;
+  background-color: #632424;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+tr:hover{
+  background-color: #ddd;
+}
+
+h1{
+  font-family: 'Rubik Mono One', sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.title-container{
+  text-align: center;
+  margin-top: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: black !important;
+}
+
+a:hover{
+  color: #70601f !important;
+
+}

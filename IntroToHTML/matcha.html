@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Espresso</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS link -->
+  <link rel="stylesheet" href="static/css/style-items.css">
+  <!-- Bootstrap CSS link -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome link -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="static/img/logo.svg" alt="Logo">
+      Digital Espresso
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="branches.html">Branches</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+
+    <div class="user-container" style="font-size: 18px;">
+      USER
+      <i class="fas fa-user"></i>
+    </div>
+  </nav>
+
+  <a href="products.html" class="go-back-link">Go back to menu</a>
+
+  
+  <div class="product-container">
+    <div class="product-image">
+      <img src="static/img/matcha.png" alt="matcha">
+    </div>
+
+    <div class="product-details">
+      <h1>Matcha</h1>
+      <p><b>Our zen in a cup.</b> Earthy, creamy, and totally green -- our Matcha is what happens when calm meets caffeine. Whisked to perfection and served with good vibes only. Warning: may cause spontaenous peace of mind.</p>
+
+      <div class="size-icons">
+        <div class="size-icon" data-price="250" onclick="changePrice(this)">S</div>
+        <div class="size-icon" data-price="270" onclick="changePrice(this)">M</div>
+        <div class="size-icon" data-price="290" onclick="changePrice(this)">L</div>
+      </div>
+
+      <div id="price" class="price-container" style="margin-top:40px;">
+        <p style="  font-family: 'Rubik Mono One', sans-serif;">Price: <span id="product-price">PHP 250</span></p>
+      </div>
+
+      <div class="product-type-buttons">
+        <button class="product-type" onclick="selectProductType(this)">Iced</button>
+        <button class="product-type" onclick="selectProductType(this)">Hot</button>
+      </div>
+    </div>
+
+   
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Digital Espresso. All rights reserved. | Contact us: info@coffeeshop.com | 0917-125-7559</p>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function changePrice(button) {
+      const price = button.getAttribute('data-price');
+      document.getElementById('product-price').textContent = 'PHP ' + price;
+
+      let sizeButtons = Array.from(document.querySelectorAll('.size-icon'));
+      sizeButtons.forEach(btn => {
+        btn.classList.remove('selected');
+      });
+
+      button.classList.add('selected');
+    }
+
+
+
+    function selectProductType(button) {
+      button.classList.toggle('selected');
+
+      var otherButton = button.parentElement.querySelectorAll('.product-type');
+      otherButton.forEach(function(b) {
+        if (b !== button) {
+          b.classList.remove('selected');
+        }
+      });
+
+      button.classList.add('selected');
+    }
+  </script>
+</body>
+  
+</html>
